@@ -8,7 +8,7 @@ const SearchBar = ({
     <div className="searchBar_wrapper">
       {tooShort && (
         <p className="alert" style={{ color: "red" }}>
-          at least 3 characters are required.
+          At least 3 characters are required.
         </p>
       )}
       <input

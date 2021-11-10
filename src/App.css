@@ -47,17 +47,73 @@
   text-align: center;
   margin: 15px;
   width: 200px;
-  height: 340px;
+  height: 380px;
   font-size: 12px;
   overflow: hidden;
 }
 
 .poster {
   height: 70%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .addBtn {
   width: 140px;
   font-size: 12px;
+}
+
+.routeLink {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: green;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.card.favorite {
+  height: 600px;
+}
+
+.checkWrapper {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isWatchedLabel,
+.rating {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.isWatchedCheckbox {
+  width: 20px;
+  height: 20px;
+}
+
+.rating-bold {
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(180, 121, 11);
+}
+
+.ratingSelect {
+  margin: 0 10px;
+}
+
+.ratingBtn {
+  padding: 3px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #4169e1;
+  color: white;
+  font-weight: bold;
 }

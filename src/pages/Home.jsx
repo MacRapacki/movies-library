@@ -1,33 +1,29 @@
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import MovieCard from "../components/MovieCard";
 import SearchBar from "../components/SearchBar";
 
+import useHomeContainer from "./useHomeContainer";
+
 const Home = () => {
-  const [searchedTitle, setSearchedTitle] = useState("");
-  const [searchedMovies, setSearchedMovies] = useState([]);
-  const [tooShort, setTooShort] = useState(false);
-  const [favoriteList, setFavoriteList] = useState([]);
+  const {
+    findMovies,
+    setSearchedTitle,
+    searchedTitle,
+    tooShort,
+    searchedMovies,
+  } = useHomeContainer();
 
-  const findMovies = async (title) => {
-    if (title.length < 3) {
-      setTooShort(true);
-    } else {
-      try {
-        setTooShort(false);
-        const url = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_APIKEY}&s=${title}`;
-        const res = await fetch(url);
-        const data = await res.json();
-        setSearchedMovies(data.Search);
-      } catch (err) {
-        console.log(err);
-      }
-    }
-  };
-
+  console.log(searchedMovies);
   return (
     <>
       <h1 className="title_header">Movies Library</h1>
+      <Link to="/mylibrary" className="routeLink">
+        {" "}
+        My Library
+      </Link>
       <SearchBar
         setSearchedTitle={setSearchedTitle}
         findMovies={findMovies}
@@ -39,12 +35,12 @@ const Home = () => {
           <p>Sorry, we couldn't find this in our library. Please try again.</p>
         )}
 
-        {searchedMovies?.map((movie) => {
+        {searchedMovies?.map((movie, index) => {
           return (
             <MovieCard
               title={movie.Title}
               poster={movie.Poster}
-              key={movie.imdbID}
+              key={index}
               id={movie.imdbID}
             />
           );
