@@ -4,9 +4,7 @@ import { useSelector } from "react-redux";
 import FavoriteMovieCard from "../components/FavoriteMovieCard";
 
 const MyLibrary = () => {
-  const listOfMyMovies = useSelector((state) => state?.myLibrary?.myLibrary);
-
-  console.log(listOfMyMovies);
+  const listOfMyMovies = useSelector((state) => state.myLibrary.myLibrary);
 
   return (
     <>

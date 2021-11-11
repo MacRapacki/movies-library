@@ -16,7 +16,6 @@ const Home = () => {
     searchedMovies,
   } = useHomeContainer();
 
-  console.log(searchedMovies);
   return (
     <>
       <h1 className="title_header">Movies Library</h1>

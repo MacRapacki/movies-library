@@ -5,10 +5,13 @@ import {
   removeFromLibrary,
   rateMovie,
 } from "../store/myLibrarySlice";
+import useFavoriteMovieCard from "./useFavoriteMovieCard";
 
 const FavoriteMovieCard = ({ poster, title, index, isWatched, rating }) => {
-  const [currentRatting, setCurrentRating] = useState(rating);
+  const [currentRatting, setCurrentRating] = useState(5);
   const dispatch = useDispatch();
+  const { ratings } = useFavoriteMovieCard();
+
   return (
     <div className="card favorite">
       <img className="poster" src={poster} alt="movie poster" />
@@ -34,16 +37,13 @@ const FavoriteMovieCard = ({ poster, title, index, isWatched, rating }) => {
             className="ratingSelect"
             onChange={(e) => setCurrentRating(e.target.value)}
           >
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-            <option value={4}>4</option>
-            <option value={5}>5</option>
-            <option value={6}>6</option>
-            <option value={7}>7</option>
-            <option value={8}>8</option>
-            <option value={9}>9</option>
-            <option value={10}>10</option>
+            {ratings.map((item, index) => {
+              return (
+                <option value={item} key={index}>
+                  {item}
+                </option>
+              );
+            })}
           </select>
           <button
             className="ratingBtn"
