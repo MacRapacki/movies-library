@@ -11,7 +11,7 @@ const useHomeContainer = () => {
     } else {
       try {
         setTooShort(false);
-        const url = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_APIKEY}&s=${title}&plot=full`;
+        const url = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_APIKEY}&s=${title}&plot=full`;
         const res = await fetch(url);
         const data = await res.json();
         setSearchedMovies(data.Search);
