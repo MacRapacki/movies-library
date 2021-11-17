@@ -117,3 +117,10 @@
   color: white;
   font-weight: bold;
 }
+
+.alert {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+}

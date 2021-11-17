@@ -31,7 +31,9 @@ const Home = () => {
       />
       <div className="moviesWrapper">
         {!searchedMovies && (
-          <p>Sorry, we couldn't find this in our library. Please try again.</p>
+          <p className="alert">
+            Sorry, we couldn't find this in our library. Please try again.
+          </p>
         )}
 
         {searchedMovies?.map((movie, index) => {
