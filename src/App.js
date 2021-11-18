@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import MyLibrary from "./pages/MyLibrary";
-import Home from "./pages/Home";
+import MyLibrary from "./pages/My library/MyLibrary";
+import Home from "./pages/Home/Home";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { checkLocalStorage } from "./store/myLibrarySlice";

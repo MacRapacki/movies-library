@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import FavoriteMovieCard from "../components/FavoriteMovieCard";
+import FavoriteMovieCard from "../../components/favorite movie card/FavoriteMovieCard";
 
 const MyLibrary = () => {
   const listOfMyMovies = useSelector((state) => state.myLibrary.myLibrary);

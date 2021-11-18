@@ -4,7 +4,7 @@ import {
   toggleIsWatched,
   removeFromLibrary,
   rateMovie,
-} from "../store/myLibrarySlice";
+} from "../../store/myLibrarySlice";
 import useFavoriteMovieCard from "./useFavoriteMovieCard";
 
 const FavoriteMovieCard = ({ poster, title, index, isWatched, rating }) => {

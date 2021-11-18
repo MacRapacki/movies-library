@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import MovieCard from "../components/MovieCard";
-import SearchBar from "../components/SearchBar";
+import MovieCard from "../../components/movie card/MovieCard";
+import SearchBar from "../../components/searchbar/SearchBar";
 
 import useHomeContainer from "./useHomeContainer";
 

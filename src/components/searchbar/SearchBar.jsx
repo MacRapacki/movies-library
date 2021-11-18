@@ -1,3 +1,5 @@
+import * as S from "./style";
+
 const SearchBar = ({
   setSearchedTitle,
   findMovies,
@@ -11,6 +13,11 @@ const SearchBar = ({
           At least 3 characters are required.
         </p>
       )}
+      <S.MySearchBar
+        variant="outlined"
+        defaultValue="Hello world"
+        minLength={3}
+      />
       <input
         className="searchBar"
         type="text"

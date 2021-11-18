@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addToMyLibrary } from "../store/myLibrarySlice";
+import { addToMyLibrary } from "../../store/myLibrarySlice";
 
 const useMovieCardContainer = () => {
   const dispatch = useDispatch();
